@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "HTML File Title Changer",
+    "version": "1.0",
+    "description": "Automatically set the title of the HTML page to the file name when opening a local HTML file.",
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["file:///*/*.html"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
